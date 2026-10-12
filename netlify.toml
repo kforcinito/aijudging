@@ -1,2 +1,14 @@
 [build]
   publish = "."
+
+[[redirects]]
+  from = "/ride-a-long/*"
+  to = "/ai-scoring/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ride-a-long"
+  to = "/ai-scoring/"
+  status = 301
+  force = true
