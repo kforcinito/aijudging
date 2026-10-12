@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ride A Long Judging | AI Judging Project Hub</title>
+  <meta name="description" content="Ride A Long Judging: an AI judge that scores alongside the human panel in shadow mode, with the AI Scoring MVP timeline.">
+  <meta property="og:title" content="Ride A Long Judging | AI Judging Project Hub">
+  <meta property="og:description" content="Ride A Long Judging: an AI judge that scores alongside the human panel in shadow mode, with the AI Scoring MVP timeline.">
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="ride">
+  <header class="ride">
+    <div class="wrap">
+      <p class="eyebrow"><a href="/">AI Judging Project Hub</a> · Work stream 2</p>
+      <h1>Ride A Long<br>Judging</h1>
+      <p class="intro">An AI judge rides along with the human panel, scoring the same routines in shadow mode. Its results are compared with official scores to measure accuracy and build trust before any wider use.</p>
+      <div class="streams">
+        <a class="button" href="/">← Project hub</a>
+        <a class="button" href="#timeline">MVP timeline</a>
+        <a class="button" href="/eyes-up/">Eyes Up Judging →</a>
+      </div>
+    </div>
+  </header>
+  <main class="wrap">
+    <nav aria-label="Page sections">
+      <a class="home" href="/">← Project hub</a><a href="#overview">Overview</a><a href="#how-it-works">How it works</a><a href="#success">Success</a><a href="#timeline">Timeline</a><a href="#decisions">Open decisions</a>
+    </nav>
+
+    <section id="overview">
+      <span class="tag">Work stream 2</span>
+      <h2>Overview</h2>
+      <p>Ride A Long puts an AI judge on the panel as a silent observer. It watches the same routines and produces its own rubric-based scores, which are recorded privately and compared with the official human scores after the event. The aim is to learn where AI agrees with experienced judges, where it does not, and why.</p>
+    </section>
+
+    <section id="how-it-works">
+      <h2>How it works</h2>
+      <div class="grid">
+        <article class="card"><span class="step">Observe</span><h3>Shadow scoring</h3><p>Routine video from approved events is scored by the AI against the same rubric the panel uses. Its scores are never shown to judges, coaches, or athletes during the event.</p></article>
+        <article class="card"><span class="step">Compare</span><h3>Agreement analysis</h3><p>After each event, AI scores are lined up against panel scores by category to measure agreement, spot systematic bias, and surface routines where the two diverge most.</p></article>
+        <article class="card"><span class="step">Calibrate</span><h3>Expert review</h3><p>Senior judges review the largest gaps. Their findings refine the model and can also highlight rubric language or panel calibration that needs attention.</p></article>
+      </div>
+      <div class="callout"><strong>Shadow only:</strong> Ride A Long scores have no effect on results, rankings, or awards. They exist only to evaluate the technology.</div>
+    </section>
+
+    <section id="success">
+      <h2>What success looks like</h2>
+      <ul>
+        <li>Agreement with panel scores within an accepted tolerance across rubric categories.</li>
+        <li>No consistent bias by division, level, team size, or venue setup.</li>
+        <li>Clear explanations for each AI score that a senior judge can verify.</li>
+        <li>A body of evidence large enough to support a confident go or no-go decision.</li>
+      </ul>
+    </section>
+
+    <section id="timeline">
+      <h2>AI Scoring MVP timeline</h2>
+      <p>Delivery plan for the AI Scoring MVP, from requirements through operational readiness, across eight sprints. The MVP is scheduled to be ready on <strong>Friday, April 16, 2027</strong>.</p>
+      <div class="timeline">
+        <div class="tl" aria-hidden="true">
+          <div class="tl-grid"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="tl-row tl-head">
+            <div class="tl-label">Phase</div>
+            <div class="tl-months"><span>Sep ’26</span><span>Oct</span><span>Nov</span><span>Dec</span><span>Jan ’27</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span></div>
+          </div>
+          <div class="tl-row tl-head">
+            <div class="tl-label">Sprint</div>
+            <div class="tl-track">
+              <span class="tl-sprint" style="left:15.2%;width:6.61%">0</span>
+              <span class="tl-sprint" style="left:22.89%;width:6.61%">1</span>
+              <span class="tl-sprint" style="left:30.58%;width:6.61%">2</span>
+              <span class="tl-sprint" style="left:45.96%;width:6.61%">3</span>
+              <span class="tl-sprint" style="left:53.66%;width:6.61%">4</span>
+              <span class="tl-sprint" style="left:61.35%;width:6.61%">5</span>
+              <span class="tl-sprint" style="left:69.04%;width:6.61%">6</span>
+              <span class="tl-sprint" style="left:76.73%;width:6.61%">7</span>
+            </div>
+          </div>
+          <div class="tl-row">
+            <div class="tl-label"><strong>Requirements</strong><span>MVP requirements complete Nov 20</span></div>
+            <div class="tl-track">
+              <span class="tl-bar lead" style="left:0;width:15.2%">In progress</span>
+              <span class="tl-bar req" style="left:15.2%;width:14.3%"></span>
+            </div>
+          </div>
+          <div class="tl-row band">
+            <div class="tl-label"><strong>Prototyping, Solutioning, Architecture</strong><span>Sprints 0–1 · Oct 12 – Nov 20</span></div>
+            <div class="tl-track"><span class="tl-bar proto" style="left:15.2%;width:14.3%"></span></div>
+          </div>
+          <div class="tl-row">
+            <div class="tl-label"><strong>Development &amp; QA</strong><span>Sprints 2–5 · Nov 23 – Mar 5</span></div>
+            <div class="tl-track">
+              <span class="tl-bar dev" style="left:30.58%;width:12.83%"></span>
+              <span class="tl-bar dev" style="left:45.96%;width:21.99%"></span>
+            </div>
+          </div>
+          <div class="tl-row band">
+            <div class="tl-label"><strong>Hardening (Final QA)</strong><span>Sprint 6 · Mar 8 – Mar 26</span></div>
+            <div class="tl-track"><span class="tl-bar hard" style="left:69.04%;width:6.61%"></span></div>
+          </div>
+          <div class="tl-row">
+            <div class="tl-label"><strong>Operational Readiness</strong><span>Sprint 7 · Mar 29 – Apr 16</span></div>
+            <div class="tl-track"><span class="tl-bar ops" style="left:76.73%;width:6.61%"></span></div>
+          </div>
+          <div class="tl-mvp"><span><strong>MVP ready</strong>Fri, Apr 16</span></div>
+        </div>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Phase</th><th>Sprints</th><th>Dates</th></tr></thead>
+          <tbody>
+            <tr><td>Requirements</td><td>In progress</td><td>MVP requirements complete Nov 20, 2026</td></tr>
+            <tr><td>Prototyping, Solutioning, Architecture</td><td>Sprints 0–1</td><td>Oct 12 – Nov 20, 2026</td></tr>
+            <tr><td>Development &amp; QA</td><td>Sprints 2–5</td><td>Nov 23, 2026 – Mar 5, 2027</td></tr>
+            <tr><td>Hardening (Final QA)</td><td>Sprint 6</td><td>Mar 8 – Mar 26, 2027</td></tr>
+            <tr><td>Operational Readiness</td><td>Sprint 7</td><td>Mar 29 – Apr 16, 2027</td></tr>
+            <tr><td>MVP ready</td><td>Milestone</td><td>Friday, Apr 16, 2027</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="source">Source: AI Scoring MVP Timeline (project slide).</p>
+    </section>
+
+    <section id="decisions">
+      <h2>Open decisions</h2>
+      <p>Questions the Ride A Long team needs to resolve before or during the pilot. See the <a href="/#decisions">project hub</a> for decisions shared across both streams.</p>
+      <ul>
+        <li><strong>Video rights and consent:</strong> how routine video is sourced, consented, stored, and retained.</li>
+        <li><strong>Agreement threshold:</strong> what level of agreement with the panel counts as good enough, per rubric category.</li>
+      </ul>
+    </section>
+  </main>
+  <footer><div class="wrap">AI Judging Project Hub · Ride A Long Judging · Living documentation based on project decisions and implementation notes.</div></footer>
+</body>
+</html>
