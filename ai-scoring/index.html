@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AI Scoring | AI Judging Project Hub</title>
-  <meta name="description" content="AI Scoring: an AI judge that scores alongside the human panel in shadow mode, with the AI Scoring MVP timeline.">
+  <meta name="description" content="AI Scoring: the AI scores recorded routines from one division after the event, and its scores are compared with the panel's actual scores. Includes the AI Scoring MVP timeline.">
   <meta property="og:title" content="AI Scoring | AI Judging Project Hub">
-  <meta property="og:description" content="AI Scoring: an AI judge that scores alongside the human panel in shadow mode, with the AI Scoring MVP timeline.">
+  <meta property="og:description" content="AI Scoring: the AI scores recorded routines from one division after the event, and its scores are compared with the panel's actual scores. Includes the AI Scoring MVP timeline.">
   <meta name="robots" content="noindex">
   <link rel="stylesheet" href="/styles.css">
 </head>
@@ -15,7 +15,7 @@
     <div class="wrap">
       <p class="eyebrow"><a href="/">AI Judging Project Hub</a> · Work stream 2</p>
       <h1>AI Scoring</h1>
-      <p class="intro">An AI judge rides along with the human panel, scoring the same routines in shadow mode. Its results are compared with official scores to measure accuracy and build trust before any wider use.</p>
+      <p class="intro">The AI will score routines from one division at the 2026 Youth Summit, but not live at the event due to infrastructure constraints. Instead, it scores recorded routines after the event, and we compare its scores to the panel's actual scores.</p>
       <div class="streams">
         <a class="button" href="/">← Project hub</a>
         <a class="button" href="#timeline">MVP timeline</a>
@@ -25,33 +25,45 @@
   </header>
   <main class="wrap">
     <nav aria-label="Page sections">
-      <a class="home" href="/">← Project hub</a><a href="#overview">Overview</a><a href="#how-it-works">How it works</a><a href="#success">Success</a><a href="#timeline">Timeline</a><a href="#decisions">Open decisions</a>
+      <a class="home" href="/">← Project hub</a><a href="#overview">Overview</a><a href="#how-it-works">How it works</a><a href="#success">Success</a><a href="#live">Live scoring</a><a href="#timeline">Timeline</a><a href="#decisions">Open decisions</a>
     </nav>
 
     <section id="overview">
       <span class="tag">Work stream 2</span>
       <h2>Overview</h2>
-      <p>AI Scoring puts an AI judge on the panel as a silent observer. It watches the same routines and produces its own rubric-based scores, which are recorded privately and compared with the official human scores after the event. The aim is to learn where AI agrees with experienced judges, where it does not, and why.</p>
+      <p>The AI will score routines from one division at the 2026 Youth Summit, but not live at the event due to infrastructure constraints. Instead, after the event, the AI scores 30–50 recorded routines from that division, and we compare its scores to the panel's actual scores. This tells us whether the AI is accurate, consistent from run to run, and catching anything judges miss. To start, we need the division's rubric and a confirmed video source.</p>
     </section>
 
     <section id="how-it-works">
       <h2>How it works</h2>
       <div class="grid">
-        <article class="card"><span class="step">Observe</span><h3>Shadow scoring</h3><p>Routine video from approved events is scored by the AI against the same rubric the panel uses. Its scores are never shown to judges, coaches, or athletes during the event.</p></article>
-        <article class="card"><span class="step">Compare</span><h3>Agreement analysis</h3><p>After each event, AI scores are lined up against panel scores by category to measure agreement, spot systematic bias, and surface routines where the two diverge most.</p></article>
-        <article class="card"><span class="step">Calibrate</span><h3>Expert review</h3><p>Senior judges review the largest gaps. Their findings refine the model and can also highlight rubric language or panel calibration that needs attention.</p></article>
+        <article class="card"><span class="step">Score</span><h3>Recorded routines</h3><p>After the event, the AI scores 30–50 recorded routines from one division using that division's rubric.</p></article>
+        <article class="card"><span class="step">Compare</span><h3>Agreement analysis</h3><p>AI scores are lined up against the panel's actual scores by category to measure agreement and surface routines where the two diverge most.</p></article>
+        <article class="card"><span class="step">Review</span><h3>Consistency and misses</h3><p>Routines are rescored to check the AI gives the same result from run to run, and the largest gaps are reviewed to see whether the AI caught anything judges missed.</p></article>
       </div>
-      <div class="callout"><strong>Shadow only:</strong> AI scores have no effect on results, rankings, or awards. They exist only to evaluate the technology.</div>
+      <div class="callout"><strong>After the event only:</strong> AI scores are produced after results are final and have no effect on results, rankings, or awards. They exist only to evaluate the technology.</div>
     </section>
 
     <section id="success">
       <h2>What success looks like</h2>
       <ul>
-        <li>Agreement with panel scores within an accepted tolerance across rubric categories.</li>
-        <li>No consistent bias by division, level, team size, or venue setup.</li>
+        <li>Agreement with the panel's actual scores within an accepted tolerance across rubric categories.</li>
+        <li>Consistent scores when the same routine is scored more than once.</li>
+        <li>Evidence of whether the AI catches anything judges miss.</li>
         <li>Clear explanations for each AI score that a senior judge can verify.</li>
-        <li>A body of evidence large enough to support a confident go or no-go decision.</li>
+        <li>A body of evidence strong enough to support a confident decision to scale the initiative.</li>
       </ul>
+    </section>
+
+    <section id="live">
+      <h2>What needs to be true for live AI scoring</h2>
+      <p>Before AI can score live at events, four things need to be in place.</p>
+      <div class="grid">
+        <article class="card"><h3>Improved event infrastructure</h3><p>Improved infrastructure at events, with an on-site setup that can capture and process video while the competition is running.</p></article>
+        <article class="card"><h3>Objective definitions</h3><p>Written, objective definitions for skills and scoring rules.</p></article>
+        <article class="card"><h3>Judge baseline</h3><p>A baseline for how accurate our judges are today.</p></article>
+        <article class="card"><h3>Proven consistency</h3><p>Proof that the AI scores consistently and within an agreed tolerance of the judges.</p></article>
+      </div>
     </section>
 
     <section id="timeline">
@@ -124,8 +136,10 @@
 
     <section id="decisions">
       <h2>Open decisions</h2>
-      <p>Questions the AI Scoring team needs to resolve before or during the pilot. See the <a href="/#decisions">project hub</a> for decisions shared across both streams.</p>
+      <p>Questions the AI Scoring team needs to resolve before or during the pilot.</p>
       <ul>
+        <li><strong>Division and rubric:</strong> which division to score, and getting its rubric.</li>
+        <li><strong>Video source:</strong> a confirmed source for the 30–50 recorded routines.</li>
         <li><strong>Video rights and consent:</strong> how routine video is sourced, consented, stored, and retained.</li>
         <li><strong>Agreement threshold:</strong> what level of agreement with the panel counts as good enough, per rubric category.</li>
       </ul>
