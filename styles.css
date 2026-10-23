@@ -53,7 +53,6 @@ p { max-width:760px; margin:0 0 14px; }
 .dod li:last-child { border-bottom:0; }
 .dod li::before { content:counter(dod); position:absolute; top:16px; left:20px; width:34px; height:34px; color:#fff; background:var(--blue); font-weight:700; line-height:34px; text-align:center; }
 .dod p { margin:0; color:var(--muted); font-size:15px; }
-.tag.pending { margin:0 0 0 8px; color:#8a4b0f; background:#fdf1e7; vertical-align:2px; font-size:11px; }
 .callout { padding:20px 22px; border-left:5px solid var(--accent,var(--blue)); background:var(--tint,var(--sky)); }
 .rule { margin:20px 0; padding:20px; color:#fff; background:var(--ink); font-size:20px; font-weight:700; }
 ul { padding-left:21px; max-width:760px; }
