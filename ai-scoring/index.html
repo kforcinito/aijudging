@@ -15,7 +15,7 @@
     <div class="wrap">
       <p class="eyebrow"><a href="/">AI Judging Project Hub</a> · Work stream 2</p>
       <h1>AI Scoring</h1>
-      <p class="intro">The AI will score routines from one division at the 2026 Youth Summit, but not live at the event due to infrastructure constraints. Instead, it scores recorded routines after the event, and we compare its scores to the panel's actual scores.</p>
+      <p class="intro">The AI will score routines from one division at the 2027 Youth Summit, but not live at the event due to infrastructure constraints. Instead, it scores recorded routines after the event, and we compare its scores to the panel's actual scores.</p>
       <div class="streams">
         <a class="button" href="/">← Project hub</a>
         <a class="button" href="#timeline">MVP timeline</a>
@@ -25,13 +25,40 @@
   </header>
   <main class="wrap">
     <nav aria-label="Page sections">
-      <a class="home" href="/">← Project hub</a><a href="#overview">Overview</a><a href="#how-it-works">How it works</a><a href="#success">Success</a><a href="#live">Live scoring</a><a href="#timeline">Timeline</a><a href="#decisions">Open decisions</a>
+      <a class="home" href="/">← Project hub</a><a href="#overview">Overview</a><a href="#scope">POC scope</a><a href="#how-it-works">How it works</a><a href="#success">Success</a><a href="#live">Live scoring</a><a href="#timeline">Timeline</a><a href="#decisions">Open items</a>
     </nav>
 
     <section id="overview">
       <span class="tag">Work stream 2</span>
       <h2>Overview</h2>
-      <p>The AI will score routines from one division at the 2026 Youth Summit, but not live at the event due to infrastructure constraints. Instead, after the event, the AI scores 30–50 recorded routines from that division, and we compare its scores to the panel's actual scores. This tells us whether the AI is accurate, consistent from run to run, and catching anything judges miss. To start, we need the division's rubric and a confirmed video source.</p>
+      <p>The AI will score routines from one division at the 2027 Youth Summit, but not live at the event due to infrastructure constraints. Instead, after the event, the AI scores 30–50 recorded routines from that division, and we compare its scores to the panel's actual scores. This tells us whether the AI is accurate, consistent from run to run, and catching anything judges miss. To start, we need the division's rubric and a confirmed video source.</p>
+    </section>
+
+    <section id="scope">
+      <h2>POC scope</h2>
+      <h3 class="subhead">Validation only (“shadow mode”)</h3>
+      <ul>
+        <li>No live AI scoring this season. The AI never becomes the system of record, and judges stay the decision-makers.</li>
+        <li>The POC scores recorded routines after an event: about 30–50 sessions from one division, using a variety of routines by quality (below average, average, and above average). The AI's scores are compared against the actual judges' scores.</li>
+        <li>We're measuring three things: whether scores are consistent from run to run, what the AI catches that judges miss (and the reverse), and whether AI can do this job at all.</li>
+      </ul>
+
+      <h3 class="subhead">Why not live</h3>
+      <div class="grid">
+        <article class="card"><h3>Unwritten criteria</h3><p>Subjective scoring criteria aren't written down, for example what separates an 8 from a 9.</p></article>
+        <article class="card"><h3>Inconsistent focus</h3><p>Early tests show the AI is inconsistent about what it focuses on.</p></article>
+        <article class="card"><h3>Limited training data</h3><p>We don't have enough training data yet.</p></article>
+        <article class="card"><h3>Venue bandwidth</h3><p>Many venues only have about 3 Mbps of bandwidth.</p></article>
+      </div>
+
+      <h3 class="subhead">Initial scope</h3>
+      <div class="grid two">
+        <article class="card"><span class="step">First</span><h3>All Star Cheer</h3><p>All Star Cheer comes first because its rubric is more objective: a given skill earns a given number of points. School and dance come later.</p></article>
+        <article class="card"><span class="step">First</span><h3>Objective and difficulty scoring</h3><p>The objective and difficulty side comes first. The subjective and artistic side is a stretch goal, and the business will decide whether to pursue it.</p></article>
+      </div>
+
+      <h3 class="subhead">Youth Summit target (Apr/May 2027)</h3>
+      <div class="callout"><strong>The “live” checkpoint:</strong> if the model is ready, we can decide whether to have it score in parallel at a table next to the panel. That's close to real time but not live, and it's for comparison only. We don't have to wait until April: we can start scoring historical video as far back as we have it.</div>
     </section>
 
     <section id="how-it-works">
@@ -135,13 +162,15 @@
     </section>
 
     <section id="decisions">
-      <h2>Open decisions</h2>
-      <p>Questions the AI Scoring team needs to resolve before or during the pilot.</p>
+      <h2>Open items</h2>
+      <p>Questions the AI Scoring team needs to resolve before or during the POC.</p>
       <ul>
-        <li><strong>Division and rubric:</strong> which division to score, and getting its rubric.</li>
+        <li><strong>Bandwidth at venues:</strong> Michael is following up with James and Kelly Green. Live streaming runs at 5–15 Mbps on a separate network from SimpleScore.</li>
+        <li><strong>Division and rubric:</strong> which division and rubric the POC will use.</li>
         <li><strong>Video source:</strong> a confirmed source for the 30–50 recorded routines.</li>
-        <li><strong>Video rights and consent:</strong> how routine video is sourced, consented, stored, and retained.</li>
-        <li><strong>Agreement threshold:</strong> what level of agreement with the panel counts as good enough, per rubric category.</li>
+        <li><strong>Video rights and consent:</strong> Varsity TV vs. Flo, and how routine video is consented, stored, and retained.</li>
+        <li><strong>Accuracy parity:</strong> how we define it, including sample size and tolerance, per rubric category.</li>
+        <li><strong>CapEx and budget.</strong></li>
       </ul>
     </section>
   </main>
