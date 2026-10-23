@@ -44,6 +44,8 @@ p { max-width:760px; margin:0 0 14px; }
 .stream a, .eyes .step, .ride .step { color:var(--accent); }
 .stream a.open { color:#fff; }
 .tag { display:inline-block; margin:0 0 10px; padding:3px 8px; color:var(--accent,var(--blue)); background:var(--tint,var(--sky)); font-size:12px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
+.subhead { margin:30px 0 10px; font-size:20px; letter-spacing:-.015em; }
+.sample { margin:12px 0 0; padding:12px 14px; background:var(--tint,var(--sky)); font:13px/1.6 Menlo, Consolas, monospace; white-space:pre-wrap; }
 .callout { padding:20px 22px; border-left:5px solid var(--accent,var(--blue)); background:var(--tint,var(--sky)); }
 .rule { margin:20px 0; padding:20px; color:#fff; background:var(--ink); font-size:20px; font-weight:700; }
 ul { padding-left:21px; max-width:760px; }

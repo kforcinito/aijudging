@@ -24,7 +24,7 @@
   </header>
   <main class="wrap">
     <nav aria-label="Page sections">
-      <a class="home" href="/">← Project hub</a><a href="#overview">Overview</a><a href="#how-it-works">How it works</a><a href="#success">Success</a><a href="#status">Status</a><a href="#timeline">Timeline</a>
+      <a class="home" href="/">← Project hub</a><a href="#overview">Overview</a><a href="#how-it-works">How it works</a><a href="#success">Success</a><a href="#requirements">Requirements</a><a href="#status">Status</a><a href="#timeline">Timeline</a>
     </nav>
 
     <section id="overview">
@@ -50,6 +50,55 @@
         <li>Clearer, more consistent comments for coaches.</li>
         <li>Faster turnaround from the end of a routine to comments entered in SimpleScore.</li>
       </ul>
+    </section>
+
+    <section id="requirements">
+      <h2>Requirements: comment formatting</h2>
+      <p>Functional requirements for how Eyes Up formats and categorizes comments. Every comment is either a deduction or a rule violation, written in the format judges and coaches already use, and listed in chronological order from the start of the routine.</p>
+      <div class="grid two">
+        <article class="card"><span class="step">Deductions</span><h3>Video time – Deduction – Location / notes</h3><p>Chronological from the beginning of the routine, using the shorthand from the deduction system and paper score sheet.</p>
+<pre class="sample">0:59 - AF - back right
+1:58 - MBF - center pyramid</pre></article>
+        <article class="card"><span class="step">Violations</span><h3>Routine time – Rule – Brief explanation</h3><p>Same chronological format, citing the rule category and subgroup (for example, Tosses B3 or Stunts A3).</p>
+<pre class="sample">1:10 - Tosses B3 - WARNING - top person appears to perform 2 tricks during toss
+2:10 - Stunts A3 - no spotter for extended stunt on right side of pyramid</pre></article>
+      </div>
+
+      <h3 class="subhead">Deduction shorthand</h3>
+      <p>Most judges use the shorthand listed on the deduction system and paper score sheet. Each deduction comment is labeled with one of these codes.</p>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Code</th><th>Deduction</th></tr></thead>
+          <tbody>
+            <tr><td>AF</td><td>Athlete Fall</td></tr>
+            <tr><td>MAF</td><td>Major Athlete Fall</td></tr>
+            <tr><td>BB</td><td>Building Bobble</td></tr>
+            <tr><td>BF</td><td>Building Fall</td></tr>
+            <tr><td>MBF</td><td>Major Building Fall</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="subhead">Violation categories</h3>
+      <p>For All Star Cheer, rules are grouped into categories (General, Stunts, Pyramids, Tumbling, Dismounts, and Tosses) plus Event Rules. Each category is broken into smaller subgroups, such as B3 or A3, and each violation comment cites both.</p>
+
+      <h3 class="subhead">Approved and off-limits language</h3>
+      <p>Language depends on the scenario:</p>
+      <ul>
+        <li><strong>Point deductions</strong> are stated factually.</li>
+        <li><strong>Rule violations</strong> may call for a warning when it can't be said factually that something happened. In the 1:10 example above, “appears” is used on purpose, together with WARNING.</li>
+        <li><strong>All comments</strong> are direct, so there is no confusion when someone reads the comment and reviews the routine.</li>
+      </ul>
+
+      <h3 class="subhead">Comment guardrails</h3>
+      <ul>
+        <li>The AI drafts and organizes; the judge makes every final call and approves before anything is pasted into SimpleScore.</li>
+        <li>The AI never applies, adds, or suggests a deduction or score.</li>
+        <li>The AI never adds observations, severity, or advice the judge didn't say.</li>
+        <li>Comments match the existing customer-facing format, with no freestyling.</li>
+        <li>Every comment is labeled as one of the predefined deductions or violations.</li>
+      </ul>
+      <div class="rule">The AI drafts and organizes. The judge makes every call.</div>
     </section>
 
     <section id="status">
