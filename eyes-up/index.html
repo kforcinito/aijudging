@@ -24,7 +24,7 @@
   </header>
   <main class="wrap">
     <nav aria-label="Page sections">
-      <a class="home" href="/">← Project hub</a><a href="#overview">Overview</a><a href="#how-it-works">How it works</a><a href="#success">Success</a><a href="#requirements">Requirements</a><a href="#score-sheets">Score sheets</a><a href="#status">Status</a><a href="#timeline">Timeline</a>
+      <a class="home" href="/">← Project hub</a><a href="#overview">Overview</a><a href="#how-it-works">How it works</a><a href="#success">Success</a><a href="#requirements">Requirements</a><a href="#score-sheets">Score sheets</a><a href="#status">Status</a><a href="#test-plan">Test plan</a><a href="#timeline">Timeline</a>
     </nav>
 
     <section id="overview">
@@ -50,6 +50,7 @@
         <li>Clearer, more consistent comments for coaches.</li>
         <li>Faster turnaround from the end of a routine to comments entered in SimpleScore.</li>
       </ul>
+      <p>These are measured at The American Grand. See the targets in the <a href="#test-plan">live test plan</a>.</p>
     </section>
 
     <section id="requirements">
@@ -148,12 +149,95 @@ VT 1:58 - BF left side</pre><p class="note"><strong>Safety violation:</strong> G
           <thead><tr><th>Phase</th><th>Status</th></tr></thead>
           <tbody>
             <tr><td>1 · Discovery</td><td>Complete.</td></tr>
-            <tr><td>2 · Prototype</td><td>In progress: moving into operationalizing the prototype.</td></tr>
+            <tr><td>2 · Prototype</td><td>In progress: Testing &amp; QA (Nov 16 – Dec 4). Success measures and targets approved Nov 12.</td></tr>
             <tr><td>3 · Pilot</td><td>The American Grand, December 18–19, in Las Vegas, NV.</td></tr>
             <tr><td>4 · Decision</td><td>Decide on wider rollout based on judge feedback and comment quality.</td></tr>
           </tbody>
         </table>
       </div>
+    </section>
+
+    <section id="test-plan">
+      <h2>Live test plan</h2>
+      <p>How the proof of concept will be tested at The American Grand, December 18–19. Eyes Up runs live with one deductions judge on one panel, without affecting SimpleScore or the competition. The test answers three questions:</p>
+      <div class="grid">
+        <article class="card"><span class="step">Usability</span><h3>Eyes stay up</h3><p>Can the judge use Eyes Up during live routines without looking down or falling behind, and do they find it helpful?</p></article>
+        <article class="card"><span class="step">Comment quality</span><h3>Right section, right words</h3><p>Are the generated comments sorted into the right section (Deductions or Violations) and written in approved Varsity wording?</p></article>
+        <article class="card"><span class="step">Time saved</span><h3>Faster into SimpleScore</h3><p>Does the judge get comments into SimpleScore faster than with their current method?</p></article>
+      </div>
+
+      <h3 class="subhead">Scope</h3>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Item</th><th>In scope for this test</th></tr></thead>
+          <tbody>
+            <tr><td>Event</td><td>The American Grand, December 18–19, 2026</td></tr>
+            <tr><td>Judge</td><td>One deductions judge on one panel</td></tr>
+            <tr><td>Device</td><td>The judge's Chromebook with a USB headset; the app is served from an on-site Mac mini running a local model</td></tr>
+            <tr><td>Workflow</td><td>Judge dictates notes during the routine → Generate Comments → review and edit → copy and paste each section into SimpleScore</td></tr>
+            <tr><td>Out of scope</td><td>SimpleScore integration, other judge positions, dance, and producing scores</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="subhead">Roles</h3>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Role</th><th>Responsibilities</th></tr></thead>
+          <tbody>
+            <tr><td>Test leads and observers</td><td>Run the plan, keep the observation logs, record video, gather feedback, and troubleshoot as needed</td></tr>
+            <tr><td>Pilot judge</td><td>Uses Eyes Up during routines and has the final say on every comment entered in SimpleScore</td></tr>
+            <tr><td>Technical support</td><td>Setup, smoke test, and restarting the app or model if needed</td></tr>
+            <tr><td>On-site IT</td><td>Network, Mac mini placement, and escalation point</td></tr>
+            <tr><td>On-site exec sponsor</td><td>Champions the pilot with judges and event leadership, and helps clear blockers that need leadership support</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="subhead">What we measure</h3>
+      <p>Targets for the first live proof of concept, aligned with business stakeholders on November 12. They test whether the tool is reliable and can improve, not production-level accuracy.</p>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Area</th><th>Measure</th><th>How it's captured</th><th>Target</th></tr></thead>
+          <tbody>
+            <tr><td>Quality</td><td>Comments placed in the correct section</td><td>After the event, compare AI-generated comments with what was entered in SimpleScore</td><td>≥85%</td></tr>
+            <tr><td>Quality</td><td>Comments submitted with approved wording unchanged</td><td>Same comparison</td><td>≥80%</td></tr>
+            <tr><td>Quality</td><td>Comments capture the judge's intended observation and scoring terminology</td><td>Same comparison; edits that change the meaning count as misses</td><td>≥90%</td></tr>
+            <tr><td>Quality</td><td>Dictation accuracy</td><td>Saved transcription compared with observer video audio for a sample of routines</td><td>≥85% of lines need no correction</td></tr>
+            <tr><td>Reliability</td><td>Tool issues that disrupt judging (slow processing, app or model failure, mic or connectivity problems, fallbacks to manual)</td><td>Observer log of the type, cause, and duration of each issue</td><td>≤3 per day</td></tr>
+            <tr><td>Reliability</td><td>Panel never delayed; judge back on their normal method before the next routine</td><td>Observer log of time from issue start to the judge working normally</td><td>0 panel delays</td></tr>
+            <tr><td>Time saved</td><td>Time from routine end to comments submitted in SimpleScore, including review and editing</td><td>Eyes Up timestamps, checked by an observer every 5th routine</td><td>15% faster than baseline (stretch: 20%)</td></tr>
+            <tr><td>Time saved</td><td>Judge keeps pace with the competition</td><td>Observer log: did the judge fall behind before the next routine started?</td><td>Never</td></tr>
+            <tr><td>Usability</td><td>Times the judge looks down to use the tool while dictating</td><td>Video review compared with a typing or writing baseline</td><td>Fewer than baseline</td></tr>
+            <tr><td>Usability</td><td>Judge satisfaction (1–5)</td><td>Judge survey after the last routine</td><td>≥4</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="rule">Priority: Quality, then Reliability, then Time saved, then Usability.</div>
+      <p><strong>How edits are counted:</strong></p>
+      <ul>
+        <li><strong>Wording edit:</strong> the judge changes phrasing, grammar, or word choice, but the scoring observation stays the same. This counts against the approved-wording measure only.</li>
+        <li><strong>Meaning change:</strong> the judge changes what was observed, the skill or element, or the scoring term. This counts against the intended-observation measure.</li>
+      </ul>
+      <p><strong>Baseline:</strong> time to submit comments and lookdowns are compared with the judge's current method over at least 8–10 routines. The preferred approach is to observe the judge at a practice session before December 18; the fallback is to log the first 8–10 routines on the day with the normal method before switching to Eyes Up.</p>
+
+      <h3 class="subhead">Rules of the test</h3>
+      <div class="callout"><strong>SimpleScore stays the system of record.</strong> The judge reviews every comment before it goes in.</div>
+      <ul>
+        <li>The judge can stop using Eyes Up at any time. If a fallback trigger is hit (for example, the mic fails or the model is down for more than 2 routines), the judge switches to their normal method immediately.</li>
+        <li>Observers don't coach the judge during routines; questions wait for breaks.</li>
+        <li>Nothing about the test should delay the panel or the competition.</li>
+        <li>Video covers only the judge's screen and hands, with the judge's consent. No athletes, other judges' screens, or scores are filmed, and video is deleted after the debrief unless approved for training use.</li>
+      </ul>
+
+      <h3 class="subhead">After the event</h3>
+      <ul>
+        <li>Compare the AI-generated comments with the pilot judge's SimpleScore entries for each test routine, and saved transcripts with observer video audio for a sample of routines.</li>
+        <li>Compile logs, the judge survey, video notes, and the comparison into a findings write-up within 1 week.</li>
+        <li>Debrief with the judge within 1 week.</li>
+        <li>Present results against targets, with a go / iterate / stop recommendation, at the AI Scoring &amp; Judging bi-weekly.</li>
+      </ul>
+      <p class="source">Full plan, including the event-day run of show, observation log, and judge survey: <a href="https://varsitybrands.sharepoint.com/:w:/s/VS-AIScoringJudging/cQqqrAfY0dlzRpJ5kKM9Xk9dEgUBUANHtHysPEQq-GMc-WENOA">Eyes Up POC: Live Test &amp; Observation Plan</a> (SharePoint).</p>
     </section>
 
     <section id="timeline">
@@ -200,6 +284,23 @@ VT 1:58 - BF left side</pre><p class="note"><strong>Safety violation:</strong> G
             <tr><td>Event Readiness</td><td>Dec 14 – Dec 17, 2026</td></tr>
             <tr><td>Proof-of-concept go-live</td><td>Friday, Dec 18, 2026</td></tr>
             <tr><td>Pilot at The American Grand</td><td>Dec 18 – Dec 19, 2026</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="subhead">Pre-event milestones</h3>
+      <p>Readiness tasks for the live test, completed during Testing &amp; QA and Event Readiness.</p>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Status</th><th>Task</th></tr></thead>
+          <tbody>
+            <tr><td>Done Oct 29</td><td>Setup checklist approved</td></tr>
+            <tr><td>Done Oct 29</td><td>On-site IT briefed; network and Mac mini location agreed</td></tr>
+            <tr><td>Done Nov 12</td><td>Success measures and targets approved</td></tr>
+            <tr><td>Open</td><td>Comment accuracy test set run and target met</td></tr>
+            <tr><td>Open</td><td>Remote testing with the pilot judge</td></tr>
+            <tr><td>Open</td><td>Baseline captured for the judge's current method</td></tr>
+            <tr><td>Open</td><td>Observation logs and judge survey finalized and printed</td></tr>
           </tbody>
         </table>
       </div>
