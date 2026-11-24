@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AI Scoring | AI Judging Project Hub</title>
-  <meta name="description" content="AI Scoring: the AI scores recorded routines from one division after the event, and its scores are compared with the panel's actual scores. Includes the AI Scoring MVP timeline.">
+  <meta name="description" content="AI Scoring: in a Phase 1 proof of concept, AI watches Level 4 All Star routine video and gives judges counts, flags, and section tags to review. It does not score. Includes the AI Scoring MVP timeline.">
   <meta property="og:title" content="AI Scoring | AI Judging Project Hub">
-  <meta property="og:description" content="AI Scoring: the AI scores recorded routines from one division after the event, and its scores are compared with the panel's actual scores. Includes the AI Scoring MVP timeline.">
+  <meta property="og:description" content="AI Scoring: in a Phase 1 proof of concept, AI watches Level 4 All Star routine video and gives judges counts, flags, and section tags to review. It does not score. Includes the AI Scoring MVP timeline.">
   <meta name="robots" content="noindex">
   <link rel="stylesheet" href="/styles.css">
 </head>
@@ -15,7 +15,7 @@
     <div class="wrap">
       <p class="eyebrow"><a href="/">AI Judging Project Hub</a> · Work stream 2</p>
       <h1>AI Scoring</h1>
-      <p class="intro">The AI will score routines from one division at the 2027 Youth Summit, but not live at the event due to infrastructure constraints. Instead, it scores recorded routines after the event, and we compare its scores to the panel's actual scores.</p>
+      <p class="intro">Phase 1 is a proof of concept for April 2027. The AI watches Level 4 All Star routine video and gives judges counts, flags, and section tags to review, each linked to its moment in the video. It does not score anything: judges keep scoring as they do today.</p>
       <div class="streams">
         <a class="button" href="/">← Project hub</a>
         <a class="button" href="#timeline">MVP timeline</a>
@@ -25,60 +25,145 @@
   </header>
   <main class="wrap">
     <nav aria-label="Page sections">
-      <a class="home" href="/">← Project hub</a><a href="#overview">Overview</a><a href="#scope">POC scope</a><a href="#how-it-works">How it works</a><a href="#success">Success</a><a href="#live">Live scoring</a><a href="#timeline">Timeline</a><a href="#decisions">Open items</a>
+      <a class="home" href="/">← Project hub</a><a href="#overview">Overview</a><a href="#scope">POC scope</a><a href="#requirements">Phase 1 requirements</a><a href="#how-it-works">How it works</a><a href="#success">Success</a><a href="#live">Live scoring</a><a href="#timeline">Timeline</a><a href="#decisions">Open items</a>
     </nav>
 
     <section id="overview">
       <span class="tag">Work stream 2</span>
       <h2>Overview</h2>
-      <p>The AI will score routines from one division at the 2027 Youth Summit, but not live at the event due to infrastructure constraints. Instead, after the event, the AI scores 30–50 recorded routines from that division, and we compare its scores to the panel's actual scores. This tells us whether the AI is accurate, consistent from run to run, and catching anything judges miss. To start, we need the division's rubric and a confirmed video source.</p>
+      <p>Phase 1 is a proof of concept for April 2027. The AI watches Level 4 All Star routine video and gives judges counts (athletes, tosses, jumps), flags (out of bounds, over time), and section tags to review. It does not score anything and issues no deductions. Judges keep scoring as they do today and use the AI output as an extra check. Each item links to its moment in the video, so a judge can verify it in seconds. The AI's counts and flags are graded against an answer key from a rules expert, which tells us whether the AI is accurate and fast enough to be useful to judges.</p>
     </section>
 
     <section id="scope">
       <h2>POC scope</h2>
       <h3 class="subhead">Validation only (“shadow mode”)</h3>
       <ul>
-        <li>No live AI scoring this season. The AI never becomes the system of record, and judges stay the decision-makers.</li>
-        <li>The POC scores recorded routines after an event: about 30–50 sessions from one division, using a variety of routines by quality (below average, average, and above average). The AI's scores are compared against the actual judges' scores.</li>
-        <li>We're measuring three things: whether scores are consistent from run to run, what the AI catches that judges miss (and the reverse), and whether AI can do this job at all.</li>
+        <li>No AI scoring this season. The AI counts, flags, and tags; it never issues a score or deduction, never becomes the system of record, and judges stay the decision-makers.</li>
+        <li>The POC uses about 15 Level 4 routines across age groups, with final score sheets: 5 strong (no deductions), 5 average (1–2 deductions), and 5 weak (3+ deductions). The AI's counts and flags are graded against a rules expert's answer key, with the judge panel's results as a second check.</li>
+        <li>We're measuring three things: whether the AI counts and flags accurately, whether results are ready within 60 seconds of the routine ending, and whether judges find the output useful.</li>
       </ul>
 
-      <h3 class="subhead">Why not live</h3>
+      <h3 class="subhead">Why the AI doesn't score yet</h3>
       <div class="grid">
         <article class="card"><h3>Unwritten criteria</h3><p>Subjective scoring criteria aren't written down, for example what separates an 8 from a 9.</p></article>
         <article class="card"><h3>Inconsistent focus</h3><p>Early tests show the AI is inconsistent about what it focuses on.</p></article>
         <article class="card"><h3>Limited training data</h3><p>We don't have enough training data yet.</p></article>
-        <article class="card"><h3>Venue bandwidth</h3><p>Many venues only have about 3 Mbps of bandwidth.</p></article>
+        <article class="card"><h3>Venue bandwidth</h3><p>Many venues only have about 3 Mbps of bandwidth, which will help decide whether judges can use the output live.</p></article>
       </div>
 
       <h3 class="subhead">Initial scope</h3>
       <div class="grid two">
-        <article class="card"><span class="step">First</span><h3>All Star Cheer</h3><p>All Star Cheer comes first because its rubric is more objective: a given skill earns a given number of points. School and dance come later.</p></article>
-        <article class="card"><span class="step">First</span><h3>Objective and difficulty scoring</h3><p>The objective and difficulty side comes first. The subjective and artistic side is a stretch goal, and the business will decide whether to pursue it.</p></article>
+        <article class="card"><span class="step">First</span><h3>All Star Level 4</h3><p>All Star Cheer comes first because its rubric is more objective: a given skill earns a given number of points. Phase 1 covers Level 4 only, with a 2:30 routine length. Other levels and school divisions come later.</p></article>
+        <article class="card"><span class="step">First</span><h3>Counts and flags, not scores</h3><p>Athlete count, tosses, jumps, out-of-bounds and overtime flags, and section tags come first, with tumbling as a stretch goal. Execution quality, stunts, pyramids, and deductions are out of scope for Phase 1.</p></article>
       </div>
 
       <h3 class="subhead">Youth Summit target (Apr/May 2027)</h3>
-      <div class="callout"><strong>The “live” checkpoint:</strong> if the model is ready, we can decide whether to have it score in parallel at a table next to the panel. That's close to real time but not live, and it's for comparison only. We don't have to wait until April: we can start scoring historical video as far back as we have it.</div>
+      <div class="callout"><strong>The “live” checkpoint:</strong> depending on AI processing speed and venue bandwidth, judges either see and use the AI output during the event (Option A), or the AI runs in the background and its results are compared with judges and video afterward (Option B). Either way, judges score as usual, and if the tool or connection fails, nothing changes for the event. We don't have to wait until April: we can start on historical video as far back as we have it.</div>
+    </section>
+
+    <section id="requirements">
+      <span class="tag">Draft</span>
+      <h2>Phase 1 requirements</h2>
+      <p>Phase 1 is a proof of concept (POC) for April 2027. The AI watches Level 4 All Star routine video and gives judges counts, flags, and section tags to review. <strong>It does not score anything.</strong> Judges keep scoring as they do today and use the AI output as an extra check. Each item links to its moment in the video, so a judge can verify it in seconds.</p>
+      <p><strong>Why:</strong> the long-term goal is faster, more consistent judging and a path to the 2028 savings target ($100K). Savings may come from shorter event days and more efficient judging, plus new value for customers, not only from smaller judging panels.</p>
+
+      <h3 class="subhead">What's included</h3>
+      <p>Phase 1 covers All Star Level 4 routines only, with a 2:30 routine length.</p>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Category</th><th>Items</th></tr></thead>
+          <tbody>
+            <tr><td>In scope</td><td>Total athlete count, tosses (type and count), jumps (type, count, connected), out-of-bounds flag, overtime flag, and section flags and tags across the whole routine</td></tr>
+            <tr><td>Stretch goal</td><td>Tumbling counts and skill types: standing tumbling first, then running tumbling. Attempted if feasible; not required for POC success.</td></tr>
+            <tr><td>Out of scope</td><td>Scoring or deductions, execution quality (height, form), stunts, pyramids, building bobbles and falls, other levels, school divisions, and a new score sheet</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="source">Later phases will be evaluated and adjusted once Phase 1 shows what's possible. Reference: AI Phased Approach.pptx.</p>
+
+      <h3 class="subhead">Output</h3>
+      <p>Requested target: AI output is ready within 60 seconds of the routine ending, ideally 10 to 30 seconds. Feasibility is still to be determined.</p>
+      <div class="grid">
+        <article class="card"><span class="step">Count</span><h3>A number plus skill types</h3><p>Each with a timestamp: total athletes on the floor, tosses by type, and jumps by type and whether they're connected.</p></article>
+        <article class="card"><span class="step">Flag</span><h3>A note for the judge</h3><p>No deduction is issued. Out of bounds, and over time (2-second “warning” or 3+ second “deduction”).</p></article>
+        <article class="card"><span class="step">Tag</span><h3>Where each section starts and ends</h3><p>Building, standing tumbling, running tumbling, jumps, and tosses.</p></article>
+      </div>
+      <ul>
+        <li><strong>Out of bounds:</strong> both feet fully off the mat, including the border. Shows the timestamp and “2 feet out of bounds.”</li>
+        <li><strong>Overtime:</strong> two flag levels. Level 1 is over 2:30 and flags a “warning.” Level 2 is over 2:33 (the deduction threshold), flags a “deduction,” and shows how far over.</li>
+        <li><strong>Tags can overlap:</strong> a stunt during running tumbling gets a building tag inside the running tumbling section. Judges should be able to jump to every place a section type appears, since running tumbling can happen many times in one routine.</li>
+        <li><strong>Settings, not hard-coded:</strong> routine length is a setting (2:30 for the POC) and could later come from ERMP based on level and division. Level and division are settings too, so later phases can add levels without a rebuild.</li>
+      </ul>
+
+      <h3 class="subhead">Skill rules</h3>
+      <p>The AI only needs to label each skill and count it. It doesn't judge how well the skill was done. Skills are built in this order, easiest to hardest:</p>
+      <ol>
+        <li><strong>Athlete count:</strong> the number of athletes on the floor when the routine starts. This drives every quantity rule below.</li>
+        <li><strong>Tosses:</strong> type and count. A majority of the team must perform a Level 4 toss in the same section (a single portion of the routine where skills from that skill set are performed). Required numbers come from the building quantity chart. Level 4 tosses: ball kick, pike X, pike split, hitch kick, switch kick, double toe touch, ball full, pike full, kick full, toe touch full, full up toe touch, double full.</li>
+        <li><strong>Jumps:</strong> type, count, and whether connected. Only scorable advanced jumps count; choreography jumps are ignored. Level 4 jumps: toe touch, pike, front hurdler (right or left), side hurdler (right or left), double nine.
+          <ul>
+            <li>Connected means back-to-back, using a whip approach (continuous arm swing between jumps).</li>
+            <li>Variety means at least 2 different jumps. A left and a right hurdler count as the same jump.</li>
+            <li>Jumps only count if the athlete lands on their feet. Required numbers come from the tumbling/jump quantity chart.</li>
+          </ul>
+        </li>
+        <li><strong>Stretch goal 1, standing tumbling:</strong> type and count, using the 10 standing passes on the L4 Tumbling List.</li>
+        <li><strong>Stretch goal 2, running tumbling:</strong> type and count, using the running passes on the L4 Tumbling List. Many passes include a “transition” (any skills between the first and last skill), which makes them harder to identify. For both tumbling types, the athlete must land on their feet; a jump inside a pass doesn't break it up, but a T-jump does.</li>
+      </ol>
+
+      <h3 class="subhead">Success metrics</h3>
+      <p>The POC succeeds if it counts and flags accurately, returns results within 60 seconds, and judges find it useful. Proposed targets are starting points for the group to confirm.</p>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Metric</th><th>How we measure it</th><th>Proposed target</th></tr></thead>
+          <tbody>
+            <tr><td>Athlete count accuracy</td><td>AI count vs. video replay review</td><td>95% of routines exact</td></tr>
+            <tr><td>Toss accuracy</td><td>AI count and types vs. video replay review</td><td>90% match</td></tr>
+            <tr><td>Jump accuracy</td><td>AI count, types, and connections vs. video replay review</td><td>90% match</td></tr>
+            <tr><td>Out-of-bounds flags</td><td>Caught vs. missed, and false flags</td><td>90% caught, under 10% false flags</td></tr>
+            <tr><td>Overtime flags</td><td>Caught vs. missed, at both levels</td><td>100% caught</td></tr>
+            <tr><td>Speed</td><td>Time from routine end to results ready</td><td>Under 60 seconds</td></tr>
+            <tr><td>Judge usefulness</td><td>Survey of POC judges on tags, counts, and flags</td><td>Most judges rate it useful</td></tr>
+            <tr><td>Tumbling (stretch)</td><td>AI pass types and counts vs. video replay review</td><td>Tracked only; not part of pass/fail</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p><strong>How we compare:</strong> for each routine, a rules expert reviews the same video and records the correct counts and flags (the “answer key”). AI results are graded against that answer key. Comparing the AI to the judge panel's results is a second check.</p>
+      <div class="callout"><strong>Business case:</strong> the POC doesn't save money on its own. It shows whether the AI is accurate and fast enough to support the 2028 savings target ($100K) through faster judging, shorter event days and, later, smaller panels or new customer features that can be monetized.</div>
+
+      <h3 class="subhead">POC plan</h3>
+      <p>The test approach will be decided based on AI video processing speed and venue bandwidth. Either way, judges score as usual, and if the tool or connection fails, nothing changes for the event.</p>
+      <div class="grid two">
+        <article class="card"><span class="step">Option A</span><h3>Live</h3><p>Judges see and use the AI output during the event to help with scoring and deductions.</p></article>
+        <article class="card"><span class="step">Option B</span><h3>After the fact</h3><p>The AI runs alongside judging, and results are compared with judges and video afterward. Judges aren't involved in testing.</p></article>
+      </div>
+      <ul>
+        <li><strong>Training and test videos:</strong> about 15 Level 4 routines across age groups, with final score sheets: 5 strong (no deductions), 5 average (1–2 deductions), and 5 weak (3+ deductions).</li>
+        <li><strong>Build order:</strong> Aaron starts with strong routines and tosses, then works toward weak routines and harder skills. The weeks before the event are for hardening and testing.</li>
+      </ul>
+
+      <p>Outstanding decisions are tracked under <a href="#decisions">Open items</a>.</p>
+      <p class="source">Source: AI Scoring POC – Phase 1 Requirements (draft, Nov 2026).</p>
     </section>
 
     <section id="how-it-works">
       <h2>How it works</h2>
       <div class="grid">
-        <article class="card"><span class="step">Score</span><h3>Recorded routines</h3><p>After the event, the AI scores 30–50 recorded routines from one division using that division's rubric.</p></article>
-        <article class="card"><span class="step">Compare</span><h3>Agreement analysis</h3><p>AI scores are lined up against the panel's actual scores by category to measure agreement and surface routines where the two diverge most.</p></article>
-        <article class="card"><span class="step">Review</span><h3>Consistency and misses</h3><p>Routines are rescored to check the AI gives the same result from run to run, and the largest gaps are reviewed to see whether the AI caught anything judges missed.</p></article>
+        <article class="card"><span class="step">Watch</span><h3>Count, flag, and tag</h3><p>The AI watches the routine video and returns counts, flags, and section tags, each with a timestamp, ideally within 10 to 30 seconds of the routine ending.</p></article>
+        <article class="card"><span class="step">Verify</span><h3>Judges check in seconds</h3><p>Each item links to its moment in the video, so a judge can jump straight to it and confirm or ignore it.</p></article>
+        <article class="card"><span class="step">Grade</span><h3>Answer key</h3><p>A rules expert reviews the same video and records the correct counts and flags. AI results are graded against that answer key, and compared with the judge panel's results as a second check.</p></article>
       </div>
-      <div class="callout"><strong>After the event only:</strong> AI scores are produced after results are final and have no effect on results, rankings, or awards. They exist only to evaluate the technology.</div>
+      <div class="callout"><strong>No effect on results:</strong> the AI issues no scores or deductions. Its output has no effect on results, rankings, or awards, and exists only to support judges and evaluate the technology.</div>
     </section>
 
     <section id="success">
       <h2>What success looks like</h2>
       <ul>
-        <li>Agreement with the panel's actual scores within an accepted tolerance across rubric categories.</li>
-        <li>Consistent scores when the same routine is scored more than once.</li>
-        <li>Evidence of whether the AI catches anything judges miss.</li>
-        <li>Clear explanations for each AI score that a senior judge can verify.</li>
-        <li>A body of evidence strong enough to support a confident decision to scale the initiative.</li>
+        <li>Counts and flags meet the proposed accuracy targets: athlete count exact in 95% of routines, 90% match on tosses and jumps, 90% of out-of-bounds caught with under 10% false flags, and 100% of overtime caught.</li>
+        <li>Results are ready within 60 seconds of the routine ending.</li>
+        <li>Most POC judges rate the tags, counts, and flags useful.</li>
+        <li>Every item links to its moment in the video, so a judge can verify it.</li>
+        <li>Evidence strong enough to decide whether AI can support the 2028 savings target ($100K) and later phases.</li>
       </ul>
     </section>
 
@@ -166,10 +251,11 @@
       <p>Questions the AI Scoring team needs to resolve before or during the POC.</p>
       <ul>
         <li><strong>Bandwidth at venues:</strong> Michael is following up with James and Kelly Green. Live streaming runs at 5–15 Mbps on a separate network from SimpleScore.</li>
-        <li><strong>Division and rubric:</strong> which division and rubric the POC will use.</li>
-        <li><strong>Video source:</strong> a confirmed source for the 30–50 recorded routines.</li>
+        <li><strong>Live vs. after the fact:</strong> whether judges use the output live (Option A) or it runs in the background and is compared afterward (Option B), based on processing speed and venue bandwidth.</li>
+        <li><strong>Judge-facing output:</strong> how the output looks to judges (UX/UI), and how much tagging helps vs. adds noise.</li>
+        <li><strong>Video source:</strong> a confirmed source for the ~15 Level 4 routines and their final score sheets.</li>
         <li><strong>Video rights and consent:</strong> Varsity TV vs. Flo, and how routine video is consented, stored, and retained.</li>
-        <li><strong>Accuracy parity:</strong> how we define it, including sample size and tolerance, per rubric category.</li>
+        <li><strong>Success targets:</strong> confirming the proposed accuracy, speed, and usefulness targets.</li>
         <li><strong>CapEx and budget.</strong></li>
       </ul>
     </section>
